@@ -47,7 +47,7 @@ class DatabasePersistence
   end
 
   def create_new_list(list_name)
-    query"INSERT INTO lists (name) VALUES ($1)"
+    sql = "INSERT INTO lists (name) VALUES ($1)"
     query(sql, list_name)
   end
 
