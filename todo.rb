@@ -1,7 +1,6 @@
 require "sinatra"
 require "sinatra/content_for"
 require "tilt/erubis"
-require "pry"
 
 require_relative "database_persistence"
 
