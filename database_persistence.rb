@@ -66,9 +66,9 @@ class DatabasePersistence
     query(sql, list_id, todo_name)
   end
 
-  def delete_todo_from_list(list_id, todo_id)
+  def delete_todo_from_list(todo_id, list_id)
     sql = "DELETE FROM todos WHERE id = $1 AND list_id = $2"
-    result = query(sql, id, list_id)
+    result = query(sql, todo_id, list_id)
   end
 
   def update_todo_status(list_id, todo_id, new_status)

@@ -171,10 +171,11 @@ post "/lists/:list_id/todos/:id/destroy" do
   @list = load_list(@list_id)
 
   todo_id = params[:id].to_i
-  @storage.delete_todo_from_list(@list_id, todo_id)
+  @storage.delete_todo_from_list(todo_id, @list_id)
 
   if env["HTTP_X_REQUESTED_WITH"] == "XMLHttpRequest"
     status 204
+    session[:success] = "The todo has been deleted."
   else
     session[:success] = "The todo has been deleted."
     redirect "/lists/#{@list_id}"
