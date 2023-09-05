@@ -1,6 +1,6 @@
 # WuDo
 
-ReservoirTasks is a web-based Ruby application built with Sinatra, utilizing erubis for templating and pg for PostgreSQL database interactions. It provides a user-friendly interface to manage daily tasks and organize them into lists.
+WuDo is a web-based Ruby application built with Sinatra, utilizing erubis for templating and pg for PostgreSQL database interactions. It provides a user-friendly interface to manage daily tasks and organize them into lists.
 
 ## Features
 
